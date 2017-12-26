@@ -1,5 +1,6 @@
 module Day2 where
   
+import Control.Arrow ((&&&))
 import Data.List (foldl', scanl')
 import qualified Data.Map as M
 
@@ -20,7 +21,7 @@ part1 = concat . map show . (code move 5) . lines
 -- part 2
 
 moves :: M.Map [Char] Char
-moves = M.fromList $ map (\s -> (init s, last s))
+moves = M.fromList $ map (init &&& last)
         [               "1D3"
         ,               "2D6", "2R3"
         , "3U1", "3L2", "3D7", "3R4"
