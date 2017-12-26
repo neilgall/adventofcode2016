@@ -1,0 +1,13 @@
+-- Haskell Playground 1.0
+
+input <- readFile "day3.txt"
+
+-- part 1
+part1 "3 4 5\n3 10 25" 
+part1 input
+
+-- part2
+test = "101 301 501\n102 302 502\n103 303 503\n201 401 601\n202 402 602\n203 403 603"
+parse2 test
+
+part2 input
