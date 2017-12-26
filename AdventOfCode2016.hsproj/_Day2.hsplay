@@ -1,0 +1,13 @@
+-- Haskell Playground 1.0
+test = "ULL\nRRDDD\nLURDL\nUUUUD"
+input <- readFile "day2.txt"
+
+-- part1
+
+part1 test
+part1 input
+
+-- part2
+
+part2 test
+part2 input
