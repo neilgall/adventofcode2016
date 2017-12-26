@@ -1,0 +1,14 @@
+-- Haskell Playground 1.0
+-- part 1
+
+follow (parse "R2, L3")
+follow (parse "R2, R2, R2")
+follow (parse "R5, L5, R5, R3")
+
+fmap part1 $ readFile "day1.txt"
+
+-- part 2
+
+duplicates . trail . expand . parse $ "R8, R4, R4, R8"
+
+fmap part2 $ readFile "day1.txt"
