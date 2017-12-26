@@ -1,0 +1,8 @@
+-- Haskell Playground 1.0
+
+-- part1 "abc"
+
+input = "ojvtpuvg"
+--part1 input
+
+part2 "abc" -- == "05ace8e3"
