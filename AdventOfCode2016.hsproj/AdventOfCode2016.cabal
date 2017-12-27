@@ -19,6 +19,7 @@ Executable AdventOfCode2016
       cryptohash -any,
       split -any,
       base16-bytestring -any,
+      array -any,
       base -any,
       parsec -any,
       bytestring -any
