@@ -5,7 +5,9 @@ build-type: Simple
 license: AllRightsReserved
 stability: experimental
 data-files:
+    day6.txt
     day3.txt
+    day6test.txt
     day4.txt
     day1.txt
     day2.txt
@@ -27,5 +29,6 @@ Executable AdventOfCode2016
   other-modules:
       Day5
       Day4
+      Day6
       Day2
       Day3
