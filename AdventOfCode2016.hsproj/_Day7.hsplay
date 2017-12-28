@@ -1,0 +1,23 @@
+-- Haskell Playground 1.0
+input <- readFile "day7.txt"
+
+-- part 1
+
+part1tests = [
+  "abba[mnop]qrst",
+  "abcd[bddb]xyyx",
+  "aaaa[qwer]tyui",
+  "ioxxoj[asdfgh]zxcvbn" ]
+
+part1 input
+
+-- part 2
+
+part2tests = [
+  "aba[bab]xyz",
+  "xyx[xyx]xyx",
+  "aaa[kek]eke",
+  "zazbz[bzb]cdb" ]
+  
+map ssl part2tests
+part2 input

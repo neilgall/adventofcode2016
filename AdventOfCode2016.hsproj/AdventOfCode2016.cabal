@@ -5,8 +5,9 @@ build-type: Simple
 license: AllRightsReserved
 stability: experimental
 data-files:
-    day6.txt
+    day7.txt
     day3.txt
+    day6.txt
     day6test.txt
     day4.txt
     day1.txt
@@ -27,8 +28,9 @@ Executable AdventOfCode2016
       bytestring -any
   default-language: Haskell2010
   other-modules:
-      Day5
-      Day4
-      Day6
-      Day2
       Day3
+      Day6
+      Day7
+      Day4
+      Day2
+      Day5
