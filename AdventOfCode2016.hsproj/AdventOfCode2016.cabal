@@ -9,6 +9,7 @@ data-files:
     day3.txt
     day6.txt
     day6test.txt
+    day8.txt
     day4.txt
     day1.txt
     day2.txt
@@ -20,15 +21,18 @@ Executable AdventOfCode2016
   build-depends:
       containers -any,
       cryptohash -any,
-      split -any,
       base16-bytestring -any,
       array -any,
+      matrix -any,
+      vector -any,
       base -any,
+      split -any,
       parsec -any,
       bytestring -any
   default-language: Haskell2010
   other-modules:
       Day3
+      Day8
       Day6
       Day7
       Day4

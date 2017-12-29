@@ -1,0 +1,9 @@
+-- Haskell Playground 1.0
+r = rotateRow 0 4 $ rotateCol 1 1 $ rect 3 2 newScreen
+
+pixelsLit r
+
+i <- load "day8.txt"
+
+part1 i
+par
