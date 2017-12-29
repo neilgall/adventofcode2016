@@ -10,6 +10,7 @@ data-files:
     day6.txt
     day6test.txt
     day8.txt
+    day9.txt
     day4.txt
     day1.txt
     day2.txt
@@ -35,6 +36,8 @@ Executable AdventOfCode2016
       Day8
       Day6
       Day7
+      Day9
       Day4
+      Day9b
       Day2
       Day5

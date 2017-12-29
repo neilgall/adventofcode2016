@@ -1,0 +1,11 @@
+-- Haskell Playground 1.0
+
+part1 "ADVENT"
+part1 "A(1x5)BC"
+part1 "(3x3)XYZ"
+part1 "A(2x2)BCD(2x2)EFG"
+part1 "(6x1)(1x3)A"
+part1 "X(8x2)(3x3)ABCY"
+
+input <- readFile "day9.txt"
+part1 input

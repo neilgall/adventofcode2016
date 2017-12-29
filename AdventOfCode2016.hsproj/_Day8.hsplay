@@ -6,4 +6,4 @@ pixelsLit r
 i <- load "day8.txt"
 
 part1 i
-par
+part2 i 
