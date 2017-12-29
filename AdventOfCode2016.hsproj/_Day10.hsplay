@@ -1,0 +1,12 @@
+-- Haskell Playground 1.0
+
+t = loads "" "value 5 goes to bot 2\nbot 2 gives low to bot 1 and high to bot 0\nvalue 3 goes to bot 1\nbot 1 gives low to output 1 and high to bot 0\nbot 0 gives low to output 2 and high to output 0\nvalue 2 goes to bot 2"
+
+f = initial t
+
+r = execState (step t) f
+r
+findComparison 5 2 r
+
+part1
+part2
