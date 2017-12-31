@@ -8,7 +8,6 @@ import Data.List
 import Data.Maybe (listToMaybe, catMaybes)
 import qualified Data.Set as S
 import qualified Data.Vector.Unboxed as U
-import Statistics.LinearRegression 
 
 type Element = String
 
@@ -73,15 +72,22 @@ friedMicrochips is = notnull (ms S.\\ gs) && notnull gs
     where
         ms = typesOf Microchip is  
         gs = typesOf Generator is
+        
+pairingScore :: [Item] -> Int
+pairingScore is = sum scores
+    where
+        pairs = groupBy sameElement is
+        sameElement a b = (_element a) == (_element b)
+        scorePair (a:b:_) = let d = abs (_floor a - _floor b) in 9 - d * d
+        scores = map scorePair pairs
 
-distanceToGoal :: Building -> Double
-distanceToGoal b = m * m * 16 - b
+floorScore :: [Item] -> Int
+floorScore is = sum $ map _floor is
+
+distanceToGoal :: Building -> Int
+distanceToGoal = (0-) . dist . S.toList . _items
     where     
-        dist = fromIntegral . sum . map _floor . S.toList
-        points = map dist $ (_items b):(_previous b)
-        xs = U.fromList [0.0..fromIntegral $ length points] :: U.Vector Double
-        ys = U.fromList points :: U.Vector Double
-        (m, b) = linearRegression xs ys
+        dist is = pairingScore is + floorScore is
         
 recordState :: Building -> Building
 recordState b = over previous ((_items b):) b
@@ -162,6 +168,10 @@ scan b = do
                 return Nothing
     putStrLn . show . minimum . catMaybes $ results
 
-main = do
-    scan testInitial
-    scan initial
+--main = do
+--    scan testInitial
+--    scan initial
+
+main = 
+    putStrLn . show . fmap _steps $ assemble 100 initial
+    

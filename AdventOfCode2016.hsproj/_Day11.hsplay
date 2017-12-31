@@ -1,8 +1,7 @@
 -- Haskell Playground 1.0
    
-view steps $ assemble testInitial
+fmap _steps $ assemble 100 testInitial
 
-view steps $ assemble initial
+fmap _steps $ assemble 100 initial
 
-map distanceToGoal $ sortOn distanceToGoal $ candidateMoves initial
 
