@@ -1,32 +1,8 @@
 -- Haskell Playground 1.0
-testInitial = Building {
-    _elevator = 1,
-    _items = [
-        Item "Hydrogen" Microchip 1,
-        Item "Lithium" Microchip 1,
-        Item "Hydrogen" Generator 2,
-        Item "Lithium" Generator 3 ],
-    _previous = [] }
    
-map (\b -> friedMicrochips (_items b)) $ candidateMoves testInitial >>= candidateMoves >>= candidateMoves >>= candidateMoves >>= candidateMoves >>= candidateMoves >>= 
-     
--- finished testInitial
+view steps $ assemble testInitial
 
-assemble testInitial
+view steps $ assemble initial
 
-initial = Building {
-    _elevator = 1,
-    _items = [
-        Item "Promethium" Microchip 1,
-        Item "Promethium" Generator 1,
-        Item "Cobalt" Generator 2,
-        Item "Curium" Generator 2,
-        Item "Ruthenium" Generator 2,
-        Item "Plutonium" Generator 2,
-        Item "Cobalt" Microchip 3,
-        Item "Curium" Microchip 3,
-        Item "Ruthenium" Microchip 3,
-        Item "Plutonium" Microchip 3 ],
-    _previous = [] }
+map distanceToGoal $ sortOn distanceToGoal $ candidateMoves initial
 
-candidateMoves initial
